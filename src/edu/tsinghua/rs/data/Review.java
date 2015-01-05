@@ -16,8 +16,8 @@ public class Review {
 
     public int hashCode() {
         return this.content.hashCode();
-    }
-    public boolean equals(Object o) {
+    } //使用字符串的hashCode作为类的hashCode
+    public boolean equals(Object o) { //如果两个类的字符串内容相等，则认为这两个类相等
         if (o == null) {
             return false;
         }
