@@ -7,6 +7,7 @@ import edu.tsinghua.rs.utils.FileIO;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 /**
  * Created by atone on 15-1-6.
@@ -36,6 +37,21 @@ public class PhraseTest {
             }
         }
         System.out.println("Review条数：" + rss.size());
+
+        int maxPhraseNumInReview = 0;
+        int minPhraseNumInReview = Integer.MAX_VALUE;
+        for (Map.Entry<Review, HashSet<Phrase>> entry : rss.entrySet()) {
+            int setSize = entry.getValue().size();
+            if (setSize > maxPhraseNumInReview) {
+                maxPhraseNumInReview = setSize;
+            }
+            if (setSize < minPhraseNumInReview) {
+                minPhraseNumInReview = setSize;
+            }
+        }
+
+        System.out.println("每条Review中最多包含" + maxPhraseNumInReview + "条短语");
+        System.out.println("每条Review中包含最少" + minPhraseNumInReview + "条短语");
 
     }
 }
