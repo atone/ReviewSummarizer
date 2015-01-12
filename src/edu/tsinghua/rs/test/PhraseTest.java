@@ -10,9 +10,12 @@ import java.util.*;
  * Created by atone on 15-1-6.
  */
 public class PhraseTest {
-    public static void main(String[] args) {
+    public static void statistics(String product) {
+        String productFile = String.format("data/%s_review_phrase.txt", product);
+
         HashMap<Review, HashSet<Phrase>> rss = new HashMap<Review, HashSet<Phrase>>();
-        ArrayList<String> strings = FileIO.readLines("data/note3_review_phrase.txt");
+        ArrayList<String> strings = FileIO.readLines(productFile);
+        System.out.println("============ " + product + " ============");
         System.out.println("总共记录条数：" + strings.size());
 
         for (String line : strings) {
@@ -62,20 +65,28 @@ public class PhraseTest {
         };
 
         Collections.sort(reviewEntries, comparator);
-        Map.Entry<Review, HashSet<Phrase>> max = reviewEntries.get(0);
+
 
         System.out.println("每条Review中最多包含" + maxPhraseNumInReview + "条短语");
 
         System.out.println("每条Review中包含最少" + minPhraseNumInReview + "条短语");
 
-        System.out.println(max.getKey().content);
-        System.out.print(max.getValue().size() + " ");
-        for (Phrase p : max.getValue()) {
-            System.out.print(p.content+ p.aspectID + " ");
+        int[] reviewDistribution = new int[maxPhraseNumInReview + 1];
+        for (Map.Entry<Review, HashSet<Phrase>> entry : rss.entrySet()) {
+            reviewDistribution[entry.getValue().size()]++;
         }
-        System.out.println();
 
+        System.out.println("根据Review中包含的短语数目的分布：\n短语数\tReview数目");
+        for (int i = minPhraseNumInReview; i <= maxPhraseNumInReview; i++) {
+            System.out.println(i + "\t" + reviewDistribution[i]);
+        }
+    }
 
-
+    public static void main(String[] args) {
+        statistics("iphone5s");
+        statistics("mx3");
+        statistics("note3");
+        statistics("3x");
+        statistics("galaxys4");
     }
 }
