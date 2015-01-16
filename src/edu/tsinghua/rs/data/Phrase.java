@@ -1,5 +1,7 @@
 package edu.tsinghua.rs.data;
 
+import java.util.HashSet;
+
 /**
  * Created by atone on 15-1-6.
  */
@@ -7,13 +9,29 @@ public class Phrase {
     public int aspectID;
     public String aspect;
     public String opinion;
+    public String opinion_adj;
+    public String opinion_adv;
     public String content;
+    public String detailedContent;
 
-    public Phrase(int aspectID, String aspect, String opinion) {
+    public Phrase(int aspectID, String aspect, String opinion, String opinion_adv, String opinion_adj) {
         this.aspectID = aspectID;
         this.aspect = aspect;
         this.opinion = opinion;
-        this.content = aspect + opinion;
+        this.opinion_adv = opinion_adv;
+        this.opinion_adj = opinion_adj;
+        this.detailedContent = aspect + opinion;
+
+        if (opinion_adj != "") {
+            this.content = aspect + opinion_adj;
+        }
+        else if (opinion_adv != "") {
+            this.content = aspect + opinion.replaceFirst(opinion_adv, "");
+        }
+        else {
+            this.content = aspect + opinion;
+        }
+
     }
 
     public int hashCode() { //使用content字符串的hashCode作为类的hashCode

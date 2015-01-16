@@ -53,4 +53,16 @@ public class FileIO {
         }
         return sb.toString();
     }
+
+    public static void writeFile(String filename, String toWrite) {
+        PrintWriter out = null;
+        try {
+            out = new PrintWriter(new FileWriter(filename));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        assert out != null;
+        out.print(toWrite);
+        out.close();
+    }
 }
