@@ -3,6 +3,7 @@ package edu.tsinghua.rs.test;
 import edu.tsinghua.rs.data.PRCollection;
 import edu.tsinghua.rs.data.Phrase;
 import edu.tsinghua.rs.data.Review;
+import edu.tsinghua.rs.summarizer.Summarizer;
 import edu.tsinghua.rs.utils.FileIO;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -27,7 +28,7 @@ public class PhraseTest {
             }
 
             Review review = new Review(s[9], s[10], s[1]);
-            Phrase phrase = new Phrase(Integer.parseInt(s[2]), s[3], s[4], s[5], s[6]);
+            Phrase phrase = new Phrase(Integer.parseInt(s[2]), s[3], s[4], s[5], s[6], Integer.parseInt(s[8]));
             if (phraseReview.containsKey(phrase)) {
                 PRCollection collection = phraseReview.get(phrase);
                 collection.reviews.add(review);
@@ -87,7 +88,7 @@ public class PhraseTest {
             }
 
             Review review = new Review(s[9], s[10], s[1]);
-            Phrase phrase = new Phrase(Integer.parseInt(s[2]), s[3], s[4], s[5], s[6]);
+            Phrase phrase = new Phrase(Integer.parseInt(s[2]), s[3], s[4], s[5], s[6], Integer.parseInt(s[8]));
             if (phraseReview.containsKey(phrase)) {
                 PRCollection collection = phraseReview.get(phrase);
                 collection.reviews.add(review);
@@ -152,7 +153,7 @@ public class PhraseTest {
             }
             Review r = new Review(s[7], s[8], s[1]);
             //String temp = s[0].replaceAll("[\\p{P}+~$`^=|<>～｀＄＾＋＝｜＜＞￥×]$", "");
-            Phrase phrase = new Phrase(Integer.parseInt(s[2]), s[3], s[4], "", "");
+            Phrase phrase = new Phrase(Integer.parseInt(s[2]), s[3], s[4], "", "", 1);
 
             if (rss.containsKey(r)) {
                 rss.get(r).add(phrase);
@@ -209,16 +210,34 @@ public class PhraseTest {
         }
     }
 
+    public static void generatePhrases(String product) {
+        String productFile = String.format("data/%s_relevance.txt", product);
+        System.err.printf("Generate result for %s...\n", product);
+        ArrayList<String> strings = FileIO.readLines(productFile);
+        HashMap<Phrase, PRCollection> phraseReviews = PreHandle.getPhraseReviewCollection(strings);
+
+        Summarizer summarizer = new Summarizer(phraseReviews);
+        Set<Phrase> results = summarizer.summarize();
+
+        StringBuffer sb = new StringBuffer();
+
+        for (int i=1; i<=17; i++) {
+            sb.append(String.format("Aspect %d: ", i));
+
+            for (Phrase p : results) {
+                if (p.aspectID == i) {
+                    sb.append(p + " ");
+                }
+            }
+            sb.append("\n");
+        }
+        FileIO.writeFile(String.format("out/phrase_result/%s.txt", product), sb.toString());
+    }
     public static void main(String[] args) {
-//        reverseStatics("iphone5s");
-//        reverseStatics("mx3");
-//        reverseStatics("note3");
-//        reverseStatics("3x");
-//        reverseStatics("galaxys4");
-        clusterOutput("iphone5s");
-        clusterOutput("mx3");
-        clusterOutput("note3");
-        clusterOutput("3x");
-        clusterOutput("galaxys4");
+        generatePhrases("3x");
+        generatePhrases("mx3");
+        generatePhrases("galaxys4");
+        generatePhrases("iphone5s");
+        generatePhrases("note3");
     }
 }

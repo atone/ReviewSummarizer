@@ -7,6 +7,7 @@ import java.util.HashSet;
  */
 public class Phrase {
     public int aspectID;
+    public int polarity;
     public String aspect;
     public String opinion;
     public String opinion_adj;
@@ -14,8 +15,9 @@ public class Phrase {
     public String content;
     public String detailedContent;
 
-    public Phrase(int aspectID, String aspect, String opinion, String opinion_adv, String opinion_adj) {
+    public Phrase(int aspectID, String aspect, String opinion, String opinion_adv, String opinion_adj, int polarity) {
         this.aspectID = aspectID;
+        this.polarity = polarity;
         this.aspect = aspect;
         this.opinion = opinion;
         this.opinion_adv = opinion_adv;
@@ -27,11 +29,18 @@ public class Phrase {
         }
         else if (opinion_adv != "") {
             this.content = aspect + opinion.replaceFirst(opinion_adv, "");
+            this.opinion_adj = opinion.replaceFirst(opinion_adv, "");
         }
         else {
             this.content = aspect + opinion;
+            this.opinion_adj = opinion;
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return this.content;
     }
 
     public int hashCode() { //使用content字符串的hashCode作为类的hashCode
