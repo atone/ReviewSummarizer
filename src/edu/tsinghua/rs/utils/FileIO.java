@@ -37,7 +37,7 @@ public class FileIO {
      * @param filename the file to read
      * @return the string which contains the content of the file
      */
-    public static String readFile(String filename) {
+    static String readFile(String filename) {
         StringBuilder sb = new StringBuilder();
         String line;
 

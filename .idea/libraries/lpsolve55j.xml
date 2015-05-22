@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="lpsolve55j">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/lpsolve55j.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="http://lpsolve.sourceforge.net/5.5/Java/docs/api/" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file:///usr/local/lib" />
+    </NATIVE>
+    <SOURCES />
+  </library>
+</component>

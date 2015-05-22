@@ -3,7 +3,8 @@ package edu.tsinghua.rs.test;
 import edu.tsinghua.rs.data.PRCollection;
 import edu.tsinghua.rs.data.Phrase;
 import edu.tsinghua.rs.data.Review;
-import edu.tsinghua.rs.summarizer.Summarizer;
+import edu.tsinghua.rs.summarizer.GreedySummarizer;
+import edu.tsinghua.rs.summarizer.LPSummarizer;
 import edu.tsinghua.rs.utils.FileIO;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -216,11 +217,28 @@ public class PhraseTest {
         ArrayList<String> strings = FileIO.readLines(productFile);
         HashMap<Phrase, PRCollection> phraseReviews = PreHandle.getPhraseReviewCollection(strings);
 
-        Summarizer summarizer = new Summarizer(phraseReviews);
-        Set<Phrase> results = summarizer.summarize();
+
+
+        LPSummarizer lpSummarizer = new LPSummarizer(phraseReviews);
+        lpSummarizer.K = 30;
+        Set<Phrase> results = lpSummarizer.summarize();
 
         StringBuffer sb = new StringBuffer();
+        sb.append("*********** Results by ILP Summarizer **********\n");
+        for (int i=1; i<=17; i++) {
+            sb.append(String.format("Aspect %d: ", i));
 
+            for (Phrase p : results) {
+                if (p.aspectID == i) {
+                    sb.append(p + " ");
+                }
+            }
+            sb.append("\n");
+        }
+        sb.append("*********** Results by Greedy Summarizer **********\n");
+        GreedySummarizer greedySummarizer = new GreedySummarizer(phraseReviews);
+        greedySummarizer.K = 30;
+        results = greedySummarizer.summarize();
         for (int i=1; i<=17; i++) {
             sb.append(String.format("Aspect %d: ", i));
 
@@ -234,10 +252,11 @@ public class PhraseTest {
         FileIO.writeFile(String.format("out/phrase_result/%s.txt", product), sb.toString());
     }
     public static void main(String[] args) {
-        generatePhrases("3x");
-        generatePhrases("mx3");
-        generatePhrases("galaxys4");
-        generatePhrases("iphone5s");
-        generatePhrases("note3");
+//        generatePhrases("3x");
+//        generatePhrases("galaxys4");
+//        generatePhrases("iphone5s");
+//        generatePhrases("mx3");
+//        generatePhrases("note3");
+        clusterOutput("3x");
     }
 }

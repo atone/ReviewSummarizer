@@ -1,7 +1,5 @@
 package edu.tsinghua.rs.data;
 
-import java.util.HashSet;
-
 /**
  * Created by atone on 15-1-6.
  */
@@ -24,10 +22,10 @@ public class Phrase {
         this.opinion_adj = opinion_adj;
         this.detailedContent = aspect + opinion;
 
-        if (opinion_adj != "") {
+        if (!opinion_adj.isEmpty()) {
             this.content = aspect + opinion_adj;
         }
-        else if (opinion_adv != "") {
+        else if (!opinion_adv.isEmpty()) {
             this.content = aspect + opinion.replaceFirst(opinion_adv, "");
             this.opinion_adj = opinion.replaceFirst(opinion_adv, "");
         }
@@ -40,7 +38,8 @@ public class Phrase {
 
     @Override
     public String toString() {
-        return this.content;
+        return "(" + this.content + ", " + this.polarity + ")";
+        //return this.content;
     }
 
     public int hashCode() { //使用content字符串的hashCode作为类的hashCode
