@@ -1,16 +1,17 @@
-package edu.tsinghua.rs.summarizer;
+package summarizer.summarizer;
 
-import edu.tsinghua.rs.data.PRCollection;
-import edu.tsinghua.rs.data.Phrase;
-import edu.tsinghua.rs.data.Review;
-import edu.tsinghua.rs.test.PreHandle;
 import lpsolve.LpSolve;
 import lpsolve.LpSolveException;
+import summarizer.model.PRCollection;
+import summarizer.model.Phrase;
+import summarizer.model.Review;
+import summarizer.test.PreHandle;
 
 import java.util.*;
 
 /**
  * Created by atone on 15/4/28.
+ * This summarizer uses ILP as global optimization methods.
  */
 public class LPSummarizer implements Summarizer {
 

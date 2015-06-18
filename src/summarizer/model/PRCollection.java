@@ -1,4 +1,4 @@
-package edu.tsinghua.rs.data;
+package summarizer.model;
 
 import java.util.HashSet;
 

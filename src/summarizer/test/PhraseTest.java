@@ -1,18 +1,20 @@
-package edu.tsinghua.rs.test;
+package summarizer.test;
 
-import edu.tsinghua.rs.data.PRCollection;
-import edu.tsinghua.rs.data.Phrase;
-import edu.tsinghua.rs.data.Review;
-import edu.tsinghua.rs.summarizer.GreedySummarizer;
-import edu.tsinghua.rs.summarizer.LPSummarizer;
-import edu.tsinghua.rs.utils.FileIO;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import summarizer.model.Aspect;
+import summarizer.model.PRCollection;
+import summarizer.model.Phrase;
+import summarizer.model.Review;
+import summarizer.summarizer.GreedySummarizer;
+import summarizer.summarizer.LPSummarizer;
+import summarizer.utils.FileIO;
 
 import java.util.*;
 
 /**
  * Created by atone on 15-1-6.
+ * This class does some tests.
  */
 public class PhraseTest {
     public static void clusterOutput(String product) {
@@ -21,34 +23,14 @@ public class PhraseTest {
         System.out.println("============ " + product + " ============");
         System.out.println("总共记录条数：" + strings.size());
 
-        HashMap<Phrase, PRCollection> phraseReview = new HashMap<Phrase, PRCollection>();
-        for (String line : strings) {
-            String[] s = line.split("\t");
-            if (s.length != 11) {
-                System.err.println("bad line: " + line);
-            }
-
-            Review review = new Review(s[9], s[10], s[1]);
-            Phrase phrase = new Phrase(Integer.parseInt(s[2]), s[3], s[4], s[5], s[6], Integer.parseInt(s[8]));
-            if (phraseReview.containsKey(phrase)) {
-                PRCollection collection = phraseReview.get(phrase);
-                collection.reviews.add(review);
-                collection.phrases.add(phrase.detailedContent);
-            }
-            else {
-                PRCollection collection = new PRCollection();
-                collection.reviews.add(review);
-                collection.phrases.add(phrase.detailedContent);
-                phraseReview.put(phrase, collection);
-            }
-        }
+        HashMap<Phrase, PRCollection> phraseReview = PreHandle.getPhrase_PRCollection(strings);
         System.out.println("聚类后的短语数目：" + phraseReview.size());
 
-        ArrayList<Map.Entry<Phrase,PRCollection>> entryArrayList = new ArrayList<Map.Entry<Phrase, PRCollection>>(phraseReview.size());
-        for (Map.Entry<Phrase,PRCollection> entry : phraseReview.entrySet()) {
+        ArrayList<Map.Entry<Phrase, PRCollection>> entryArrayList = new ArrayList<Map.Entry<Phrase, PRCollection>>(phraseReview.size());
+        for (Map.Entry<Phrase, PRCollection> entry : phraseReview.entrySet()) {
             entryArrayList.add(entry);
         }
-        Comparator<Map.Entry<Phrase,PRCollection>> comparator = new Comparator<Map.Entry<Phrase, PRCollection>>() {
+        Comparator<Map.Entry<Phrase, PRCollection>> comparator = new Comparator<Map.Entry<Phrase, PRCollection>>() {
             @Override
             public int compare(Map.Entry<Phrase, PRCollection> t0, Map.Entry<Phrase, PRCollection> t1) {
                 return t1.getValue().phrases.size() - t0.getValue().phrases.size();
@@ -58,7 +40,7 @@ public class PhraseTest {
         Collections.sort(entryArrayList, comparator);
 
         JSONArray outputArray = new JSONArray();
-        for (Map.Entry<Phrase,PRCollection> entry : entryArrayList) {
+        for (Map.Entry<Phrase, PRCollection> entry : entryArrayList) {
             JSONObject j = new JSONObject();
             j.put("phrase", entry.getKey().content);
             JSONArray phraseArray = new JSONArray(entry.getValue().phrases.toArray());
@@ -75,33 +57,14 @@ public class PhraseTest {
 
 
     }
+
     public static void reverseStatics(String product) {
         String productFile = String.format("data/%s_relevance.txt", product);
         ArrayList<String> strings = FileIO.readLines(productFile);
         System.out.println("============ " + product + " ============");
         System.out.println("总共记录条数：" + strings.size());
 
-        HashMap<Phrase, PRCollection> phraseReview = new HashMap<Phrase, PRCollection>();
-        for (String line : strings) {
-            String[] s = line.split("\t");
-            if (s.length != 11) {
-                System.err.println("bad line: " + line);
-            }
-
-            Review review = new Review(s[9], s[10], s[1]);
-            Phrase phrase = new Phrase(Integer.parseInt(s[2]), s[3], s[4], s[5], s[6], Integer.parseInt(s[8]));
-            if (phraseReview.containsKey(phrase)) {
-                PRCollection collection = phraseReview.get(phrase);
-                collection.reviews.add(review);
-                collection.phrases.add(phrase.detailedContent);
-            }
-            else {
-                PRCollection collection = new PRCollection();
-                collection.reviews.add(review);
-                collection.phrases.add(phrase.detailedContent);
-                phraseReview.put(phrase, collection);
-            }
-        }
+        HashMap<Phrase, PRCollection> phraseReview = PreHandle.getPhrase_PRCollection(strings);
         System.out.println("聚类后的短语数目：" + phraseReview.size());
 
         int totalPhraseNum = 0;
@@ -135,36 +98,18 @@ public class PhraseTest {
         System.out.println("未聚类的短语数目：" + totalPhraseNum);
         System.out.printf("每个聚类中最多有 %d 条短语，最少有 %d 条短语\n", maxPhraseNum, minPhraseNum);
         System.out.printf("每一个短语聚类对应最多 %d 条review，最少 %d 条review\n", maxReviewNum, minReviewNum);
-        System.out.printf("包含有两条review以上的短语聚类数目有 %d 个，占%5.2f%%\n", phraseWithReviewGT2, (float)100*phraseWithReviewGT2/phraseReview.size());
+        System.out.printf("包含有两条review以上的短语聚类数目有 %d 个，占%5.2f%%\n", phraseWithReviewGT2, (float) 100 * phraseWithReviewGT2 / phraseReview.size());
 
     }
 
     public static void statistics(String product) {
         String productFile = String.format("data/old/%s_review_phrase.txt", product);
 
-        HashMap<Review, HashSet<Phrase>> rss = new HashMap<Review, HashSet<Phrase>>();
         ArrayList<String> strings = FileIO.readLines(productFile);
         System.out.println("============ " + product + " ============");
         System.out.println("总共记录条数：" + strings.size());
 
-        for (String line : strings) {
-            String[] s = line.split("\t");
-            if (s.length != 9) {
-                System.err.println("bad line: " + line);
-            }
-            Review r = new Review(s[7], s[8], s[1]);
-            //String temp = s[0].replaceAll("[\\p{P}+~$`^=|<>～｀＄＾＋＝｜＜＞￥×]$", "");
-            Phrase phrase = new Phrase(Integer.parseInt(s[2]), s[3], s[4], "", "", 1);
-
-            if (rss.containsKey(r)) {
-                rss.get(r).add(phrase);
-            }
-            else {
-                HashSet<Phrase> phrases = new HashSet<Phrase>();
-                phrases.add(phrase);
-                rss.put(r, phrases);
-            }
-        }
+        HashMap<Review, HashSet<Phrase>> rss = PreHandle.getReview_PhraseCollection(strings);
         System.out.println("Review条数：" + rss.size());
 
         ArrayList<Map.Entry<Review, HashSet<Phrase>>> reviewEntries = new ArrayList<Map.Entry<Review, HashSet<Phrase>>>(rss.size());
@@ -215,22 +160,21 @@ public class PhraseTest {
         String productFile = String.format("data/%s_relevance.txt", product);
         System.err.printf("Generate result for %s...\n", product);
         ArrayList<String> strings = FileIO.readLines(productFile);
-        HashMap<Phrase, PRCollection> phraseReviews = PreHandle.getPhraseReviewCollection(strings);
-
+        HashMap<Phrase, PRCollection> phraseReviews = PreHandle.getPhrase_PRCollection(strings);
 
 
         LPSummarizer lpSummarizer = new LPSummarizer(phraseReviews);
         lpSummarizer.K = 30;
         Set<Phrase> results = lpSummarizer.summarize();
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         sb.append("*********** Results by ILP Summarizer **********\n");
-        for (int i=1; i<=17; i++) {
+        for (int i = 1; i <= 17; i++) {
             sb.append(String.format("Aspect %d: ", i));
 
             for (Phrase p : results) {
                 if (p.aspectID == i) {
-                    sb.append(p + " ");
+                    sb.append(p).append(" ");
                 }
             }
             sb.append("\n");
@@ -239,24 +183,27 @@ public class PhraseTest {
         GreedySummarizer greedySummarizer = new GreedySummarizer(phraseReviews);
         greedySummarizer.K = 30;
         results = greedySummarizer.summarize();
-        for (int i=1; i<=17; i++) {
+        for (int i = 1; i <= 17; i++) {
             sb.append(String.format("Aspect %d: ", i));
 
             for (Phrase p : results) {
                 if (p.aspectID == i) {
-                    sb.append(p + " ");
+                    sb.append(p).append(" ");
                 }
             }
             sb.append("\n");
         }
         FileIO.writeFile(String.format("out/phrase_result/%s.txt", product), sb.toString());
     }
+
+    public static void printAspectOrder(String productName) {
+        String productFile = String.format("data/%s_relevance.txt", productName);
+        ArrayList<String> strings = FileIO.readLines(productFile);
+        ArrayList<ArrayList<Aspect>> aspectOrderList = PreHandle.getAspectOrderList(strings);
+        System.out.println(aspectOrderList.size());
+    }
+
     public static void main(String[] args) {
-//        generatePhrases("3x");
-//        generatePhrases("galaxys4");
-//        generatePhrases("iphone5s");
-//        generatePhrases("mx3");
-//        generatePhrases("note3");
-        clusterOutput("3x");
+        printAspectOrder("mx3");
     }
 }

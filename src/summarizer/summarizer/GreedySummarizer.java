@@ -1,9 +1,9 @@
-package edu.tsinghua.rs.summarizer;
+package summarizer.summarizer;
 
-import edu.tsinghua.rs.data.PRCollection;
-import edu.tsinghua.rs.data.Phrase;
-import edu.tsinghua.rs.data.Review;
-import edu.tsinghua.rs.test.PreHandle;
+import summarizer.model.PRCollection;
+import summarizer.model.Phrase;
+import summarizer.model.Review;
+import summarizer.test.PreHandle;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -11,7 +11,9 @@ import java.util.Set;
 
 /**
  * Created by FlyFish on 2014/12/29.
+ * This is a summarizer which uses the greedy algorithm.
  */
+
 public class GreedySummarizer implements Summarizer {
     public int K = 20;
     public double alpha = 1000.0;
@@ -69,9 +71,8 @@ public class GreedySummarizer implements Summarizer {
             ss += specifyScore.get(p);
         }
 
-        double score = allReviews.size() + alpha * ss + beta * PreHandle.polarityScore(phrases);
         //System.err.printf("%d\t %6.4f\t%6.4f\n", allReviews.size(), alpha * ss, beta * PreHandle.polarityScore(phrases));
-        return  score;
+        return allReviews.size() + (alpha * ss) + (beta * PreHandle.polarityScore(phrases));
     }
 
 }

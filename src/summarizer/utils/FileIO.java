@@ -1,10 +1,11 @@
-package edu.tsinghua.rs.utils;
+package summarizer.utils;
 
 import java.io.*;
 import java.util.ArrayList;
 
 /**
  * Created by atone on 14/12/29.
+ * This class handles file input/output.
  */
 public class FileIO {
     /**
@@ -37,7 +38,7 @@ public class FileIO {
      * @param filename the file to read
      * @return the string which contains the content of the file
      */
-    static String readFile(String filename) {
+    public static String readFile(String filename) {
         StringBuilder sb = new StringBuilder();
         String line;
 
@@ -45,7 +46,7 @@ public class FileIO {
             FileInputStream fis = new FileInputStream(filename);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis, "UTF-8"));
             while ((line = in.readLine()) != null) {
-                sb.append(line + "\n");
+                sb.append(line).append("\n");
             }
             in.close();
         } catch (IOException e) {

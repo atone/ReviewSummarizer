@@ -1,4 +1,4 @@
-package edu.tsinghua.rs.data;
+package summarizer.model;
 
 /**
  * Created by FlyFish on 2014/12/29.
@@ -12,7 +12,6 @@ public class Review {
         this.source = source;
         this.product = product;
     }
-
 
     public int hashCode() { //使用content字符串的hashCode作为类的hashCode
         return this.content.hashCode();
