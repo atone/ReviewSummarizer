@@ -6,60 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfb5d99d-999d-4404-a69f-fc2902e0d194" name="Default" comment="change code styles">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/ReviewSummarizer_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/summarizer/AspectOrder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/summarizer/AspectStat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/summarizer/JsonReviewSummarizer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/summarizer/ReviewSummarizer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/utils/TSPFarthestNeighbor.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/3x_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/galaxys4_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/iphone5s_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mx3_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/note3_relevance.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/lpsolve55j.jar" afterPath="$PROJECT_DIR$/lib/lpsolve55j.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReviewSummarizer.iml" afterPath="$PROJECT_DIR$/ReviewSummarizer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/CDL.java" afterPath="$PROJECT_DIR$/src/org/json/CDL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/Cookie.java" afterPath="$PROJECT_DIR$/src/org/json/Cookie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/CookieList.java" afterPath="$PROJECT_DIR$/src/org/json/CookieList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/HTTP.java" afterPath="$PROJECT_DIR$/src/org/json/HTTP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/HTTPTokener.java" afterPath="$PROJECT_DIR$/src/org/json/HTTPTokener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/JSONArray.java" afterPath="$PROJECT_DIR$/src/org/json/JSONArray.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/JSONException.java" afterPath="$PROJECT_DIR$/src/org/json/JSONException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/JSONML.java" afterPath="$PROJECT_DIR$/src/org/json/JSONML.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/JSONObject.java" afterPath="$PROJECT_DIR$/src/org/json/JSONObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/JSONString.java" afterPath="$PROJECT_DIR$/src/org/json/JSONString.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/JSONStringer.java" afterPath="$PROJECT_DIR$/src/org/json/JSONStringer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/JSONTokener.java" afterPath="$PROJECT_DIR$/src/org/json/JSONTokener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/JSONWriter.java" afterPath="$PROJECT_DIR$/src/org/json/JSONWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/Kim.java" afterPath="$PROJECT_DIR$/src/org/json/Kim.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/Property.java" afterPath="$PROJECT_DIR$/src/org/json/Property.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/README" afterPath="$PROJECT_DIR$/src/org/json/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/XML.java" afterPath="$PROJECT_DIR$/src/org/json/XML.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/XMLTokener.java" afterPath="$PROJECT_DIR$/src/org/json/XMLTokener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/BitInputStream.java" afterPath="$PROJECT_DIR$/src/org/json/zip/BitInputStream.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/BitOutputStream.java" afterPath="$PROJECT_DIR$/src/org/json/zip/BitOutputStream.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/BitReader.java" afterPath="$PROJECT_DIR$/src/org/json/zip/BitReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/BitWriter.java" afterPath="$PROJECT_DIR$/src/org/json/zip/BitWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/Huff.java" afterPath="$PROJECT_DIR$/src/org/json/zip/Huff.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/JSONzip.java" afterPath="$PROJECT_DIR$/src/org/json/zip/JSONzip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/Keep.java" afterPath="$PROJECT_DIR$/src/org/json/zip/Keep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/None.java" afterPath="$PROJECT_DIR$/src/org/json/zip/None.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/PostMortem.java" afterPath="$PROJECT_DIR$/src/org/json/zip/PostMortem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/README" afterPath="$PROJECT_DIR$/src/org/json/zip/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/Unzipper.java" afterPath="$PROJECT_DIR$/src/org/json/zip/Unzipper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/json/zip/Zipper.java" afterPath="$PROJECT_DIR$/src/org/json/zip/Zipper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/summarizer/model/Aspect.java" afterPath="$PROJECT_DIR$/src/summarizer/model/Aspect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/summarizer/test/PhraseTest.java" afterPath="$PROJECT_DIR$/src/summarizer/test/PhraseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/summarizer/test/PreHandle.java" afterPath="$PROJECT_DIR$/src/summarizer/test/PreHandle.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/summarizer/summarizer/GreedySummarizer.java" afterPath="$PROJECT_DIR$/src/summarizer/summarizer/GreedyPhraseGetter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/summarizer/summarizer/LPSummarizer.java" afterPath="$PROJECT_DIR$/src/summarizer/summarizer/LPPhraseGetter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/summarizer/summarizer/Summarizer.java" afterPath="$PROJECT_DIR$/src/summarizer/summarizer/PhraseGetter.java" />
-    </list>
+    <list default="true" id="bfb5d99d-999d-4404-a69f-fc2902e0d194" name="Default" comment="增加数据文件" />
     <ignored path="ReviewSummarizer.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -83,8 +30,8 @@
       <file leaf-file-name="ReviewSummarizer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/summarizer/summarizer/ReviewSummarizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30552423">
-              <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.578354">
+              <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -94,8 +41,10 @@
         <entry file="file://$PROJECT_DIR$/src/summarizer/test/PreHandle.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-              <folding />
+              <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,8 +53,10 @@
         <entry file="file://$PROJECT_DIR$/src/summarizer/summarizer/AspectStat.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-              <folding />
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,7 +66,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="60" column="48" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="48" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -883,29 +836,41 @@
       <option name="project" value="LOCAL" />
       <updated>1434615923106</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="增加了数据种类，现在可以跑所有数据了。生成的摘要写入到文件中。">
+      <created>1447419754906</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1447419754906</updated>
+    </task>
+    <task id="LOCAL-00010" summary="增加数据文件">
+      <created>1447419860437</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1447419860437</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287879" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44545454" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17440476" sideWeight="0.49224806" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17440476" sideWeight="0.49224806" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1987076" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2078125" sideWeight="0.50775194" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287879" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -938,7 +903,9 @@
     <MESSAGE value="added new class&#10;some change" />
     <MESSAGE value="major change" />
     <MESSAGE value="change code styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="change code styles" />
+    <MESSAGE value="增加了数据种类，现在可以跑所有数据了。生成的摘要写入到文件中。" />
+    <MESSAGE value="增加数据文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加数据文件" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -977,7 +944,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -985,7 +954,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -993,7 +964,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="48" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="48" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1272,16 +1245,20 @@
     <entry file="file://$PROJECT_DIR$/src/summarizer/summarizer/AspectStat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/summarizer/test/PreHandle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-          <folding />
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1289,14 +1266,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="48" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="48" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/summarizer/summarizer/ReviewSummarizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30552423">
-          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.578354">
+          <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
           <folding />
         </state>
       </provider>
