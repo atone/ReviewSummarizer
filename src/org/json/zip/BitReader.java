@@ -9,14 +9,14 @@ public interface BitReader {
      *
      * @return true if it is a 1 bit.
      */
-    public boolean bit() throws IOException;
+    boolean bit() throws IOException;
 
     /**
      * Returns the number of bits that have been read from this bitreader.
      *
      * @return The number of bits read so far.
      */
-    public long nrBits();
+    long nrBits();
 
     /**
      * Check that the rest of the block has been padded with zeros.
@@ -28,7 +28,7 @@ public interface BitReader {
      *         contained any one bits.
      * @throws IOException
      */
-    public boolean pad(int width) throws IOException;
+    boolean pad(int width) throws IOException;
 
     /**
      * Read some bits.
@@ -38,5 +38,5 @@ public interface BitReader {
      * @throws IOException
      * @return the bits
      */
-    public int read(int width) throws IOException;
+    int read(int width) throws IOException;
 }

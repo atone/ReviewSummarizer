@@ -1,11 +1,13 @@
 package summarizer.test;
 
-import summarizer.model.Aspect;
 import summarizer.model.PRCollection;
 import summarizer.model.Phrase;
 import summarizer.model.Review;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by atone on 15/1/21.
@@ -19,6 +21,7 @@ public class PreHandle {
             String[] s = line.split("\t");
             if (s.length != 11) {
                 System.err.println("bad line: " + line);
+                continue;
             }
 
             Review review = new Review(s[9], s[10], s[1]);
@@ -44,6 +47,7 @@ public class PreHandle {
             String[] s = line.split("\t");
             if (s.length != 11) {
                 System.err.println("bad line: " + line);
+                continue;
             }
 
             Review review = new Review(s[9], s[10], s[1]);
@@ -60,34 +64,7 @@ public class PreHandle {
         return reviewPhrase;
     }
 
-    // 每一个record是一个review，将每一个review中的aspect顺序提取出来
-    public static ArrayList<ArrayList<Aspect>> getAspectOrderList(ArrayList<String> recordStrings) {
-        HashMap<Review, HashSet<Phrase>> reviewPhraseSet = getReview_PhraseCollection(recordStrings);
-        ArrayList<ArrayList<Aspect>> aspectOrderList = new ArrayList<ArrayList<Aspect>>(reviewPhraseSet.size());
 
-        Set<Map.Entry<Review, HashSet<Phrase>>> entries = reviewPhraseSet.entrySet();
-        for (Map.Entry<Review, HashSet<Phrase>> entry : entries) {
-            ArrayList<Aspect> aspectOrder = new ArrayList<Aspect>();
-            String reviewStr = entry.getKey().content;
-            HashSet<Phrase> phrases = entry.getValue();
-
-            for (Phrase p : phrases) {
-                String phrase = p.detailedContent;
-                int position = reviewStr.indexOf(phrase);
-                if (position == -1) {
-                    System.err.println("Error: Can't find \"" + phrase + "\" in \"" + reviewStr + "\"");
-                    continue;
-                }
-                Aspect aspect = new Aspect(p.aspectID);
-                aspect.position = position;
-                aspectOrder.add(aspect);
-            }
-
-            Collections.sort(aspectOrder);
-            aspectOrderList.add(aspectOrder);
-        }
-        return aspectOrderList;
-    }
 
     public static HashMap<Phrase, Double> calcSpecificScore(HashMap<Phrase, PRCollection> phraseReviews) {
         HashMap<Phrase, Double> specificScoreMap = new HashMap<Phrase, Double>();
@@ -111,29 +88,9 @@ public class PreHandle {
 
             specificScoreMap.put(p, (double)asopCount / opCount);
             //System.out.println(as + " " + op + " asopCount=" + asopCount + " opCount=" + opCount);
-
         }
         return specificScoreMap;
     }
 
-    public static double polarityScore(Set<Phrase> candidate) {
-        int[] asp_abs = new int[18];
-        int[] asp = new int[18]; // aspectID range 1~17
-        double score = 0;
 
-        for (Phrase p : candidate) {
-            asp_abs[p.aspectID] += Math.abs(p.polarity);
-            asp[p.aspectID] += p.polarity;
-        }
-
-        for (int i=1; i<=17; i++) {
-            if (asp_abs[i] - Math.abs(asp[i]) == 0) {
-                score += 1;
-            }
-            else {
-                score -= 1;
-            }
-        }
-        return score;
-    }
 }

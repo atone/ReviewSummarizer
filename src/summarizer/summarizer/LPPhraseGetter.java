@@ -13,16 +13,15 @@ import java.util.*;
  * Created by atone on 15/4/28.
  * This summarizer uses ILP as global optimization methods.
  */
-public class LPSummarizer implements Summarizer {
+public class LPPhraseGetter implements PhraseGetter {
 
-    public int K = 20;
     public double alpha = 0.001;
 
     private HashMap<Phrase, PRCollection> phraseReviews;
     private HashSet<Review> reviewSet;
     private HashMap<Phrase, Double> specifyScore;
 
-    public LPSummarizer(HashMap<Phrase, PRCollection> phraseReviews) {
+    public LPPhraseGetter(HashMap<Phrase, PRCollection> phraseReviews) {
         this.phraseReviews = phraseReviews;
         this.reviewSet = new HashSet<Review>();
         for (Map.Entry<Phrase, PRCollection> entry : this.phraseReviews.entrySet()) {
@@ -42,22 +41,17 @@ public class LPSummarizer implements Summarizer {
             System.err.println("Error when getLP");
             System.exit(-1);
         }
+
         lp.setAddRowmode(true);
 
         // set binary mode
         for (int i=0; i<nCol; i++) {
             lp.setBinary(i+1, true);
         }
-        // add length constraint
-        setZero(row);
-        for (int i=0; i<numPhrase; i++) {
-            row[i+1] = 1;
-        }
-        lp.addConstraint(row, LpSolve.LE, K);
 
         // add consistency constraint
         int[] colNo = new int[2];
-        double[] row_temp = new  double[2];
+        double[] row_temp = new double[2];
         for (int j=0; j<numReview; j++) {
             setZero(row);
             for (int i=0; i<numPhrase; i++) {
@@ -101,6 +95,34 @@ public class LPSummarizer implements Summarizer {
                 colNo[0] = i+1;
                 row_temp[0] = phrases.get(i).polarity + 1;
                 lp.addConstraintex(1, row_temp, colNo, LpSolve.LE, 0);
+            }
+        }
+
+        // add count constraint
+        for (int aspectID = 1; aspectID <= 17; aspectID++) {
+            setZero(row);
+            for (int i = 0; i < numPhrase; i++) {
+                if (phrases.get(i).aspectID == aspectID) {
+                    row[i + 1] = 1;
+                }
+            }
+            lp.addConstraint(row, LpSolve.LE, 2); //同一aspect出现次数不多于2
+        }
+
+        // add aspect constraint, any 2 phrases that have the same aspect word will only be chosen one.
+        colNo = new int[2];
+        row_temp = new double[2];
+        for (int i = 0; i < numPhrase - 1; i++) {
+            for (int j = i + 1; j < numPhrase; j++) {
+                Phrase pi = phrases.get(i);
+                Phrase pj = phrases.get(j);
+                if (pi.aspectID == pj.aspectID && pi.aspect.equals(pj.aspect)) {
+                    colNo[0] = i + 1;
+                    colNo[1] = j + 1;
+                    row_temp[0] = 1;
+                    row_temp[1] = 1;
+                    lp.addConstraintex(2, row_temp, colNo, LpSolve.LE, 1);
+                }
             }
         }
 
@@ -148,7 +170,7 @@ public class LPSummarizer implements Summarizer {
     }
 
 
-    public Set<Phrase> summarize() {
+    public Set<Phrase> getPhraseSet() {
         ArrayList<Phrase> candidate = new ArrayList<Phrase>(phraseReviews.size());
         for (Phrase p : phraseReviews.keySet()) candidate.add(p);
 

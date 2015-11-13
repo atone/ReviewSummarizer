@@ -2,6 +2,8 @@ package summarizer.model;
 
 /**
  * Created by atone on 15/6/12.
+ * This is the class that respect to an aspect
+ *
  */
 public class Aspect implements Comparable<Aspect> {
     public int id;
@@ -14,7 +16,10 @@ public class Aspect implements Comparable<Aspect> {
         this.name = nameList[id - 1];
     }
 
-    private static String[] nameList = {
+    private static String[] nameList = {"外观", "质量", "屏幕", "性价比", "系统", "软件", "操控", "电池",
+            "键盘", "信号", "短信", "界面", "输入法", "款式", "照相", "音质", "存储"};
+
+    private static String[] descriptionList = {
             "外观 外形 设计 外型 外壳 外表",
             "质量 材质 手感 质感 作工 做工",
             "屏幕 触摸屏 显示屏 分辨率 led 触摸板 液晶屏 电阻屏 显示 触屏",
@@ -37,5 +42,10 @@ public class Aspect implements Comparable<Aspect> {
     @Override
     public int compareTo(Aspect o) {
         return this.position - o.position;
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
     }
 }

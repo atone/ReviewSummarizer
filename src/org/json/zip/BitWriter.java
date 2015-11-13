@@ -13,7 +13,7 @@ public interface BitWriter {
      *
      * @throws IOException
      */
-    public void one() throws IOException;
+    void one() throws IOException;
 
     /**
      * Pad the rest of the block with zeros and flush.
@@ -23,7 +23,7 @@ public interface BitWriter {
      *            8, 16, 32, 64, 128, 256, etc.
      * @throws IOException
      */
-    public void pad(int width) throws IOException;
+    void pad(int width) throws IOException;
 
     /**
      * Write some bits. Up to 32 bits can be written at a time.
@@ -34,12 +34,12 @@ public interface BitWriter {
      *            The number of bits to write. (0..32)
      * @throws IOException
      */
-    public void write(int bits, int width) throws IOException;
+    void write(int bits, int width) throws IOException;
 
     /**
      * Write a 0 bit.
      *
      * @throws IOException
      */
-    public void zero() throws IOException;
+    void zero() throws IOException;
 }

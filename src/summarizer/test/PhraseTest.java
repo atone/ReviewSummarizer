@@ -2,12 +2,11 @@ package summarizer.test;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import summarizer.model.Aspect;
 import summarizer.model.PRCollection;
 import summarizer.model.Phrase;
 import summarizer.model.Review;
-import summarizer.summarizer.GreedySummarizer;
-import summarizer.summarizer.LPSummarizer;
+import summarizer.summarizer.GreedyPhraseGetter;
+import summarizer.summarizer.LPPhraseGetter;
 import summarizer.utils.FileIO;
 
 import java.util.*;
@@ -163,9 +162,8 @@ public class PhraseTest {
         HashMap<Phrase, PRCollection> phraseReviews = PreHandle.getPhrase_PRCollection(strings);
 
 
-        LPSummarizer lpSummarizer = new LPSummarizer(phraseReviews);
-        lpSummarizer.K = 30;
-        Set<Phrase> results = lpSummarizer.summarize();
+        LPPhraseGetter lpSummarizer = new LPPhraseGetter(phraseReviews);
+        Set<Phrase> results = lpSummarizer.getPhraseSet();
 
         StringBuilder sb = new StringBuilder();
         sb.append("*********** Results by ILP Summarizer **********\n");
@@ -180,9 +178,9 @@ public class PhraseTest {
             sb.append("\n");
         }
         sb.append("*********** Results by Greedy Summarizer **********\n");
-        GreedySummarizer greedySummarizer = new GreedySummarizer(phraseReviews);
+        GreedyPhraseGetter greedySummarizer = new GreedyPhraseGetter(phraseReviews);
         greedySummarizer.K = 30;
-        results = greedySummarizer.summarize();
+        results = greedySummarizer.getPhraseSet();
         for (int i = 1; i <= 17; i++) {
             sb.append(String.format("Aspect %d: ", i));
 
@@ -193,17 +191,12 @@ public class PhraseTest {
             }
             sb.append("\n");
         }
-        FileIO.writeFile(String.format("out/phrase_result/%s.txt", product), sb.toString());
-    }
-
-    public static void printAspectOrder(String productName) {
-        String productFile = String.format("data/%s_relevance.txt", productName);
-        ArrayList<String> strings = FileIO.readLines(productFile);
-        ArrayList<ArrayList<Aspect>> aspectOrderList = PreHandle.getAspectOrderList(strings);
-        System.out.println(aspectOrderList.size());
+        FileIO.writeFile(String.format("out/phrase_result/%s_2.txt", product), sb.toString());
     }
 
     public static void main(String[] args) {
-        printAspectOrder("mx3");
+        for (String product : new String[]{"3x", "galaxys4", "iphone5s", "mx3", "note3"}) {
+            generatePhrases(product);
+        }
     }
 }
