@@ -6,81 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfb5d99d-999d-4404-a69f-fc2902e0d194" name="Default" comment="增加数据文件">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/opinosis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/evaluation/EvaluationDataGen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/evaluation/EvaluationResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/evaluation/Statistics.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/summarizer/SimpleSummarizer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/tool/AspectOrder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/tool/SimpleLPPhraseGetter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/summarizer/utils/PreHandle.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2911_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2912_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2913_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2914_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2915_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2916_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2917_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2918_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2919_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2920_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2921_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2922_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2923_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2924_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2925_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2926_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2927_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2928_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2929_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2930_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2931_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2932_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2933_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2934_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2935_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2936_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2937_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2938_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2939_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2940_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2941_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2942_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2943_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2944_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2945_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2946_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2947_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2948_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2949_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2950_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2951_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2952_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2953_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2954_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2955_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2956_relevance.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/summarizer/model/PRCollection.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/summarizer/summarizer/AspectOrder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/summarizer/summarizer/AspectStat.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/summarizer/summarizer/GreedyPhraseGetter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/summarizer/summarizer/JsonReviewSummarizer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/summarizer/summarizer/PhraseGetter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/summarizer/test/PhraseTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/summarizer/test/PreHandle.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/summarizer/summarizer/LPPhraseGetter.java" afterPath="$PROJECT_DIR$/src/summarizer/tool/LPPhraseGetter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReviewSummarizer.iml" afterPath="$PROJECT_DIR$/ReviewSummarizer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/summarizer/model/Aspect.java" afterPath="$PROJECT_DIR$/src/summarizer/model/Aspect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/summarizer/model/Phrase.java" afterPath="$PROJECT_DIR$/src/summarizer/model/Phrase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/summarizer/model/Review.java" afterPath="$PROJECT_DIR$/src/summarizer/model/Review.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/summarizer/summarizer/ReviewSummarizer.java" afterPath="$PROJECT_DIR$/src/summarizer/summarizer/ReviewSummarizer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/summarizer/utils/FileIO.java" afterPath="$PROJECT_DIR$/src/summarizer/utils/FileIO.java" />
-    </list>
+    <list default="true" id="bfb5d99d-999d-4404-a69f-fc2902e0d194" name="Default" comment="增加数据文件" />
     <ignored path="ReviewSummarizer.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -101,14 +27,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EvaluationResult.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/summarizer/evaluation/EvaluationResult.java">
+      <file leaf-file-name="EvaluationDataGen.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/summarizer/evaluation/EvaluationDataGen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="174" column="38" selection-start-line="174" selection-start-column="38" selection-end-line="174" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="190">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -340,18 +264,12 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ReviewSummarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ReviewSummarizer" />
+              <option name="myItemId" value="summarizer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="summarizer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,11 +283,69 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="evaluation_data" />
+              <option name="myItemId" value="summarizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="evaluation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReviewSummarizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReviewSummarizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="summarizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="evaluation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EvaluationDataGen.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReviewSummarizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReviewSummarizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReviewSummarizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReviewSummarizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -905,7 +881,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="724" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -915,11 +891,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44545454" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25801528" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.120610684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22109374" sideWeight="0.48604268" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22109374" sideWeight="0.48604268" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1987076" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -986,21 +962,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/summarizer/evaluation/EvaluationResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/summarizer/evaluation/EvaluationDataGen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/summarizer/evaluation/EvaluationDataGen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1213,13 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/summarizer/model/Aspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/evaluation/first_batch/original_review/2912_三星GalaxyS5.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3857">
@@ -1268,14 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/summarizer/summarizer/SimpleSummarizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/summarizer/summarizer/ReviewSummarizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1425">
@@ -1296,14 +1242,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/summarizer/evaluation/EvaluationDataGen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1340,6 +1278,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/all_reviews/2911_relevance.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="1388" column="12" selection-start-line="1388" selection-start-column="12" selection-end-line="1388" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/phrases_new/2911_phrases.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="0" column="18539" selection-start-line="0" selection-start-column="18539" selection-end-line="0" selection-end-column="18539" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/summarizer/summarizer/SimpleSummarizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/summarizer/model/Aspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/summarizer/evaluation/EvaluationResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -1347,6 +1317,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/summarizer/evaluation/EvaluationDataGen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
