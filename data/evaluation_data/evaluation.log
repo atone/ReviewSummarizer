@@ -1,0 +1,132 @@
+****** TASK 1 ******
+======2912======
+opinosis	lexrank	96B78B17
+lexrank	basicSum	31758787
+reviewSum	lexrank	2A6A743F
+opinosis	basicSum	42403C73
+reviewSum	opinosis	408AD92B
+reviewSum	basicSum	31434449
+
+======2914======
+lexrank	opinosis	54321ED8
+basicSum	lexrank	FE6E7F43
+reviewSum	lexrank	BAC4C6BA
+opinosis	basicSum	56E65D2B
+opinosis	reviewSum	BAA12A29
+reviewSum	basicSum	350F22E3
+
+======2915======
+opinosis	lexrank	D2EC0F6D
+lexrank	basicSum	60086596
+lexrank	reviewSum	A19BADFE
+opinosis	basicSum	28C36950
+opinosis	reviewSum	4D371E72
+basicSum	reviewSum	63ECE234
+
+======2916======
+lexrank	opinosis	A09854CE
+basicSum	lexrank	BD5D5BCF
+lexrank	reviewSum	98CBA974
+basicSum	opinosis	6F489526
+opinosis	reviewSum	1F54B6E6
+basicSum	reviewSum	D93AB10C
+
+======2922======
+lexrank	opinosis	A592704B
+basicSum	lexrank	EFB157C8
+lexrank	reviewSum	F0081D8B
+opinosis	basicSum	62DF78C3
+reviewSum	opinosis	CED45B07
+reviewSum	basicSum	684AE6A4
+
+======2925======
+lexrank	opinosis	CE5BD748
+lexrank	basicSum	56DE741B
+lexrank	reviewSum	50D7630A
+basicSum	opinosis	8169A38C
+opinosis	reviewSum	F0EE9BEE
+reviewSum	basicSum	E9608EB9
+
+======2929======
+opinosis	lexrank	CDAD22C5
+lexrank	basicSum	F437A0AA
+lexrank	reviewSum	52672ACD
+opinosis	basicSum	3B00B8E4
+opinosis	reviewSum	A7AA92A6
+basicSum	reviewSum	652C330D
+
+======2931======
+opinosis	lexrank	5D346649
+lexrank	basicSum	72C353D1
+lexrank	reviewSum	21961D17
+basicSum	opinosis	B134A772
+reviewSum	opinosis	825C6B69
+reviewSum	basicSum	74A2971E
+
+======2936======
+opinosis	lexrank	91E299E7
+lexrank	basicSum	F1D69B9D
+lexrank	reviewSum	610506C3
+basicSum	opinosis	39A0CBDB
+opinosis	reviewSum	30FC2DEC
+basicSum	reviewSum	DDDA7716
+
+======2940======
+lexrank	opinosis	AE10DFB0
+basicSum	lexrank	D435ACF8
+reviewSum	lexrank	FFE72D2E
+basicSum	opinosis	648AE2A8
+opinosis	reviewSum	CA159DF9
+reviewSum	basicSum	058E72AE
+
+****** TASK 2 ******
+======2912======
+lexrank	48703466
+reviewSum	CE61B0F0
+opinosis	54DFE54B
+basicSum	5313480B
+======2914======
+lexrank	D6F79E47
+reviewSum	EFFFFF61
+opinosis	445BAD50
+basicSum	0EB0B2CD
+======2915======
+lexrank	897F33B7
+reviewSum	57711BF3
+opinosis	B92D518D
+basicSum	8E59CA54
+======2916======
+lexrank	C0A58B64
+reviewSum	4E323599
+opinosis	EF46A432
+basicSum	B6803264
+======2922======
+lexrank	63B6D31C
+reviewSum	BE58D68E
+opinosis	281ABA27
+basicSum	006E4560
+======2925======
+lexrank	8F035AB7
+reviewSum	11A03BED
+opinosis	867D6ABE
+basicSum	7EFB7BA5
+======2929======
+lexrank	369BCD1C
+reviewSum	FCDAE332
+opinosis	CDF674F4
+basicSum	BD371AC0
+======2931======
+lexrank	AD342565
+reviewSum	75B46FF2
+opinosis	2A4807E6
+basicSum	BFD697CC
+======2936======
+lexrank	05A9D2DB
+reviewSum	6EFA1979
+opinosis	49EB73EF
+basicSum	C55204F3
+======2940======
+lexrank	ED820F2C
+reviewSum	C8577436
+opinosis	617ADD9D
+basicSum	AA0A6013

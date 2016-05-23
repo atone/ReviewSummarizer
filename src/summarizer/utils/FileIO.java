@@ -1,20 +1,50 @@
 package summarizer.utils;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by atone on 14/12/29.
  * This class handles file input/output.
  */
 public class FileIO {
+
+    public static JSONObject readJSON(String filename) {
+        String content = readFile(filename);
+        JSONObject ret = null;
+        try {
+            ret = new JSONObject(content);
+        } catch (JSONException e) {
+            System.err.println("Can't parse content to JSON!");
+        }
+        return ret;
+    }
+
+    public static Map<String, Double> readPhraseScoreMap(String filename) {
+        List<String> lines = readLines(filename);
+        Map<String, Double> phraseScoreMap = new HashMap<String, Double>(lines.size());
+        for (String line : lines) {
+            String[] pieces = line.split(":");
+            String word = pieces[0];
+            double sf = Double.parseDouble(pieces[1]);
+            phraseScoreMap.put(word, sf);
+        }
+        return phraseScoreMap;
+    }
+
     /**
      * Read lines of a file and return a list where each element is a line.
      * @param filename the file to read
      * @return the read lines
      */
-    public static ArrayList<String> readLines(String filename) {
-        ArrayList<String> ret = new ArrayList<String>();
+    public static List<String> readLines(String filename) {
+        List<String> ret = new ArrayList<String>();
         String line;
 
         try {

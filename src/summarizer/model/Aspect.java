@@ -16,6 +16,17 @@ public class Aspect implements Comparable<Aspect> {
         this.name = nameList[id - 1];
     }
 
+    public static String getAspect(String content, int aspectID) {
+        assert aspectID >= 1 && aspectID <= 17;
+        String[] aspects = descriptionList[aspectID - 1].split(" ");
+        for (String aspect : aspects) {
+            if (content.contains(aspect)) {
+                return aspect;
+            }
+        }
+        return "";
+    }
+
     private static String[] nameList = {"外观", "质量", "屏幕", "性价比", "系统", "软件", "操控", "电池",
             "键盘", "信号", "短信", "界面", "输入法", "款式", "照相", "音质", "存储"};
 
@@ -40,8 +51,24 @@ public class Aspect implements Comparable<Aspect> {
     };
 
     @Override
+    public String toString() {
+        return String.format("(%s, %d)", name, id);
+    }
+
+    @Override
     public int compareTo(Aspect o) {
         return this.position - o.position;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Aspect aspect = (Aspect) o;
+
+        return id == aspect.id;
+
     }
 
     @Override

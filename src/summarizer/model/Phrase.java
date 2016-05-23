@@ -1,65 +1,49 @@
 package summarizer.model;
 
+import java.util.Set;
+
 /**
  * Created by atone on 15-1-6.
  */
 public class Phrase {
     public int aspectID;
     public int polarity;
+    public int clusterID;
     public String aspect;
     public String opinion;
-    public String opinion_adj;
-    public String opinion_adv;
     public String content;
-    public String detailedContent;
 
-    public Phrase(int aspectID, String aspect, String opinion, String opinion_adv, String opinion_adj, int polarity) {
+    public Set<Review> reviews;
+
+    public Phrase(int aspectID, int clusterID, int polarity, String content, Set<Review> reviews) {
         this.aspectID = aspectID;
         this.polarity = polarity;
-        this.aspect = aspect;
-        this.opinion = opinion;
-        this.opinion_adv = opinion_adv;
-        this.opinion_adj = opinion_adj;
-        this.detailedContent = aspect + opinion;
-
-        if (!opinion_adj.isEmpty()) {
-            this.content = aspect + opinion_adj;
-        }
-        else if (!opinion_adv.isEmpty()) {
-            this.content = aspect + opinion.replaceFirst(opinion_adv, "");
-            this.opinion_adj = opinion.replaceFirst(opinion_adv, "");
-        }
-        else {
-            this.content = aspect + opinion;
-            this.opinion_adj = opinion;
-        }
-
+        this.clusterID = clusterID;
+        this.content = content;
+        this.aspect = Aspect.getAspect(content, aspectID);
+        this.opinion = content.replace(this.aspect, "");
+        this.reviews = reviews;
     }
 
     @Override
     public String toString() {
-        return "(" + this.content + ", " + this.polarity + ")";
-        //return this.content;
+        //return "(" + this.content + ", " + this.polarity + ")";
+        return this.content;
     }
 
     @Override
-    public int hashCode() { //使用content字符串的hashCode作为类的hashCode
-        return this.content.hashCode();
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Phrase phrase = (Phrase) o;
+
+        return content.equals(phrase.content);
+
     }
 
     @Override
-    public boolean equals(Object o) { //如果两个类的content字符串内容相等，则认为这两个类相等
-        if (o == null) {
-            return false;
-        }
-        if (o.getClass() != this.getClass()) {
-            return false;
-        }
-        if (this == o) {
-            return true;
-        }
-        Phrase p = (Phrase) o;
-        return this.content.equals(p.content);
+    public int hashCode() {
+        return content.hashCode();
     }
-
 }
